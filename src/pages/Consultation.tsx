@@ -5,23 +5,25 @@ import { Helmet } from "react-helmet-async";
 
 const Consultation = () => {
   return (
-    <>
+    <div className="min-h-screen bg-zinc-950 selection:bg-cyan-500/30 flex flex-col">
       <Helmet>
-        <title>Free Consultation | SS Solutions</title>
+        <title>Project Initialization | Vagwiin</title>
         <meta
           name="description"
-          content="Request a free consultation from SS Solutions. Tell us about your electrical, plumbing, security, or IT service requirements."
-        />
-        <meta
-          name="keywords"
-          content="consultation, free consultation, inquiry, electrical services, plumbing services, security services"
+          content="Request a free consultation from Vagwiin. Tell us about your IT hardware, networking, server, CCTV, or infrastructure service requirements."
         />
         <link rel="canonical" href="https://sssolutions.com/consultation" />
       </Helmet>
+      
       <Navbar />
-      <ConsultationForm />
+      
+      {/* Main Content Area */}
+      <main className="flex-grow pt-20">
+        <ConsultationForm />
+      </main>
+      
       <Footer />
-    </>
+    </div>
   );
 };
 

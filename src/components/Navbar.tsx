@@ -4,11 +4,12 @@ import { Button } from "@/components/ui/button";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#why-us", label: "Why Us" },
-  { href: "#industries", label: "Industries" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home", isPage: true },
+  { href: "/about", label: "About", isPage: true },
+  { href: "/services", label: "Services", isPage: true },
+  { href: "/why-us", label: "Why Us", isPage: true },
+  { href: "/industries", label: "Industries", isPage: true },
+  { href: "/contact", label: "Contact", isPage: true },
 ];
 
 export const Navbar = () => {
@@ -39,15 +40,20 @@ export const Navbar = () => {
 
   const closeMenu = () => setIsMobileMenuOpen(false);
 
-  const handleNavClick = (href: string) => {
+  const handleNavClick = (link: { href: string; isPage?: boolean }) => {
     closeMenu();
     
-    // If on home page, just use hash navigation
-    if (location.pathname === "/") {
-      window.location.hash = href.substring(1);
+    if (link.isPage) {
+      // Navigate to the page
+      navigate(link.href);
     } else {
-      // Navigate to home with hash
-      navigate("/" + href);
+      // If on home page, just use hash navigation
+      if (location.pathname === "/") {
+        window.location.hash = link.href.substring(1);
+      } else {
+        // Navigate to home with hash
+        navigate("/" + link.href);
+      }
     }
   };
 
@@ -74,7 +80,7 @@ export const Navbar = () => {
           {/* Logo */}
           <a href="/" className="flex items-center gap-2">
             <span className="font-display text-xl md:text-2xl font-bold text-gradient">
-              SS Solutions
+              Vagwiin
             </span>
           </a>
 
@@ -83,7 +89,7 @@ export const Navbar = () => {
             {navLinks.map((link) => (
               <button
                 key={link.href}
-                onClick={() => handleNavClick(link.href)}
+                onClick={() => handleNavClick(link)}
                 className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm font-medium cursor-pointer bg-transparent border-none"
               >
                 {link.label}
@@ -111,7 +117,7 @@ export const Navbar = () => {
               {navLinks.map((link) => (
                 <button
                   key={link.href}
-                  onClick={() => handleNavClick(link.href)}
+                  onClick={() => handleNavClick(link)}
                   className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm font-medium py-2 text-left cursor-pointer bg-transparent border-none"
                 >
                   {link.label}

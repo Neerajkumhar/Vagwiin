@@ -1,4 +1,4 @@
-import { Zap, Droplets, ShieldCheck, Server, Anchor } from "lucide-react";
+import { Wifi, Server, ShieldCheck, Cable, Monitor, Zap, Anchor } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -8,36 +8,36 @@ export const Footer = () => {
           {/* Logo & Copyright */}
           <div className="text-center md:text-left">
             <span className="font-display text-xl font-bold text-gradient">
-              SS Solutions
+              Vagwiin
             </span>
             <p className="text-muted-foreground text-sm mt-2">
-              © {new Date().getFullYear()} SS Solutions. All Rights Reserved.
+              © {new Date().getFullYear()} Vagwiin. All Rights Reserved.
             </p>
           </div>
 
           {/* Services Icons */}
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2 text-muted-foreground">
-              <Zap className="w-4 h-4" />
-              <span className="text-sm hidden sm:inline">Electrical</span>
-            </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <Droplets className="w-4 h-4" />
-              <span className="text-sm hidden sm:inline">Plumbing</span>
-            </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <ShieldCheck className="w-4 h-4" />
-              <span className="text-sm hidden sm:inline">Security</span>
+              <Wifi className="w-4 h-4" />
+              <span className="text-sm hidden sm:inline">Networking</span>
             </div>
             <div className="flex items-center gap-2 text-muted-foreground">
               <Server className="w-4 h-4" />
-              <span className="text-sm hidden sm:inline">IT Solutions</span>
+              <span className="text-sm hidden sm:inline">Servers</span>
+            </div>
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <ShieldCheck className="w-4 h-4" />
+              <span className="text-sm hidden sm:inline">CCTV Systems</span>
+            </div>
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <Cable className="w-4 h-4" />
+              <span className="text-sm hidden sm:inline">Cabling</span>
             </div>
           </div>
 
           {/* Tagline */}
           <p className="text-muted-foreground text-sm">
-            Professional Electrical, Plumbing, Security & IT Services
+            Professional IT Hardware Solutions & Infrastructure Services
           </p>
         </div>
 

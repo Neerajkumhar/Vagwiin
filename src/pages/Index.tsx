@@ -12,23 +12,23 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>SS Solutions | Electrical, Plumbing, Security & IT Services</title>
+        <title>Vagwiin | IT Hardware Solutions & Infrastructure Services</title>
         <meta
           name="description"
-          content="SS Solutions provides professional electrician, plumber, security services, IT hardware solutions and government & private tender work execution."
+          content="Vagwiin provides professional electrician, plumber, security services, IT hardware solutions and government & private tender work execution."
         />
         <meta
           name="keywords"
-          content="electrician services, plumber services, security services, IT hardware solutions, maintenance services, tender work execution, facility management company, SS Solutions"
+          content="electrician services, plumber services, security services, IT hardware solutions, maintenance services, tender work execution, facility management company, Vagwiin"
         />
         <link rel="canonical" href="https://sssolutions.com" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            name: "SS Solutions",
+            name: "Vagwiin",
             description:
-              "Professional multi-service company delivering electrical, plumbing, security, and IT infrastructure solutions.",
+              "Professional IT hardware solutions company delivering networking, servers, CCTV systems, cabling, and infrastructure solutions.",
             url: "https://sssolutions.com",
             telephone: "+91-98765-43210",
             address: {
