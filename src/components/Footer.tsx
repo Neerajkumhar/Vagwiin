@@ -41,36 +41,7 @@ export const Footer = () => {
           </p>
         </div>
 
-        {/* Attribution Section */}
-        <div className="border-t border-border pt-8 mt-8">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-center sm:text-left">
-            <div className="text-sm text-muted-foreground">
-              Made by{" "}
-              <a
-                href="https://neeraj-portfolio-ruddy.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:text-accent transition-colors font-medium"
-              >
-                Neeraj Kumhar
-              </a>
-            </div>
-            <div className="hidden sm:flex items-center gap-2 text-muted-foreground">
-              <Anchor className="w-4 h-4 text-primary rotate-45" />
-            </div>
-            <div className="text-sm text-muted-foreground">
-              Powered By{" "}
-              <a
-                href="https://www.visuark.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:text-accent transition-colors font-medium"
-              >
-                Visuark
-              </a>
-            </div>
-          </div>
-        </div>
+
       </div>
     </footer>
   );
